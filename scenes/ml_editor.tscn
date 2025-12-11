@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://nvv355aaq1it"]
+
+[node name="ML_Editor" type="Window"]
+oversampling_override = 1.0
