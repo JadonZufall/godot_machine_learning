@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://nvv355aaq1it"]
+
+[ext_resource type="Script" uid="uid://df50da0hobqnk" path="res://Addons/gd_machine_learning/scenes/ml_editor/ml_editor.gd" id="1_ds38l"]
+
+[node name="ML_Editor" type="Window"]
+oversampling_override = 1.0
+title = "Machine Learning Editor"
+initial_position = 1
+size = Vector2i(800, 600)
+script = ExtResource("1_ds38l")
+
+[node name="ML_Preview" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(500, 500)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ML_Options" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(0, 500)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ML_Options"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ML_Options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="ML_Options/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Layers"
+
+[node name="SpinBox" type="SpinBox" parent="ML_Options/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="ML_Options/VBoxContainer"]
+layout_mode = 2
+text = "AgentType"
+
+[node name="progress_training" type="ProgressBar" parent="ML_Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="btn_train" type="Button" parent="ML_Options/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Train"
+
+[node name="btn_add_layer" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -31.0
+offset_right = 43.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Add Layer"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
