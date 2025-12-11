@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ML_Model" load_steps=5 format=3 uid="uid://bv5mcfe5kj0e8"]
 
-[ext_resource type="Script" uid="uid://bgysw725kfqop" path="res://Addons/gd_machine_learning/MachineLearning/ML_Layer.gd" id="1_nv5cl"]
-[ext_resource type="Script" uid="uid://bihuyrlji5a43" path="res://Addons/gd_machine_learning/MachineLearning/ML_Model.gd" id="2_qhc74"]
+[ext_resource type="Script" uid="uid://bgysw725kfqop" path="res://Addons/gd_machine_learning/resources/ML_Layer.gd" id="1_nv5cl"]
+[ext_resource type="Script" uid="uid://bihuyrlji5a43" path="res://Addons/gd_machine_learning/resources/ML_Model.gd" id="2_qhc74"]
 
 [sub_resource type="Resource" id="Resource_nv5cl"]
 script = ExtResource("1_nv5cl")
